@@ -99,7 +99,7 @@ function getMovies() {
 
           //remove nomination function
           function removeNomination() {
-            alert("Nomination remove");
+            alert("Nomination removed");
             nomination_List.remove();
             nomination_button.disabled = false;
             nomination_button.innerHTML = "Nominate";
