@@ -69,7 +69,7 @@ function getMovies() {
         nomination_button.onclick = myFunction;
 
       if(document.getElementById("nominations").childElementCount == 0) {
-        var emptyNoti = document.getElementByClassName("emptyNoti")
+        var emptyNoti = document.getElementById("emptyNoti")
         emptyNoti.setAttribute("style", "display: flex; align-items: center;");
       }
 
@@ -107,11 +107,14 @@ function getMovies() {
             }
           }
           nomination_List.appendChild(nominationremoved_button);
-            if(document.getElementById("nominations").childElementCount > 5){
-              alert("Nomination is greater than 5");
+            if(document.getElementById("nominations").childElementCount >= 5){
               console.log(nomination_List.lastChild);
-              nomination_List.remove();
+              // nomination_List.remove();
               document.getElementById("successNoti").setAttribute("style", "display: flex; align-items: center;")
+            }
+            if(document.getElementById("nominations").childElementCount > 5){
+              nomination_List.remove();
+              document.getElementById("cancelNoti").setAttribute("style", "display: flex; align-items: center;")
             }
 
       //end of myFunction()

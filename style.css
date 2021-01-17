@@ -265,6 +265,15 @@ p {
   border-radius: 6px;
 }
 
+#cancelNoti {
+  display: none;
+  overflow: hidden;
+  background-color: #FFCCCB;
+  margin: 20px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
 .notiText {
   display: inline-block;
   float: left;
