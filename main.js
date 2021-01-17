@@ -50,7 +50,7 @@ function getMovies() {
         const searchresult_list = document.createElement('div')
         searchresult_list.setAttribute('class', 'list')
         //search content: movie Title and movie Year
-        const search_content = document.createElement('div')
+        const search_content = document.createElement('h2')
         search_content.textContent = item.Title + " (" + item.Year + ")"
 
         // create nomination button
