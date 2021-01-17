@@ -112,6 +112,7 @@ function getMovies() {
             }
             if(document.getElementById("nominations").childElementCount > 5){
               nomination_List.remove();
+              document.getElementById("successNoti").setAttribute("style", "display: none; align-items: center;")
               document.getElementById("cancelNoti").setAttribute("style", "display: flex; align-items: center;")
             }
 
