@@ -15,8 +15,29 @@
     <!--Header-->
     <section id = "border"> <!--Border container-->
     <h1 id = "title"> The Shoppies </h1>
-    <br>
     <!--end-->
+
+
+          <!--Share buttons-->
+          <div class="share-btn-container">
+            <span><i class="fas fa-share-alt">Share</i></span>
+            <!-- Facebook share icon -->
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://ishakantak.github.io/TheShoppies/" class="facebook-btn">
+              <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://twitter.com/intent/tweet?url=https://ishakantak.github.io/TheShoppies/&text=" class="twitter-btn">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://pinterest.com/pin/create/button/?url=https://ishakantak.github.io/TheShoppies/&media=&description=" class="pinterest-btn">
+              <i class="fab fa-pinterest"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://ishakantak.github.io/TheShoppies/&title=&summary=&source=" class="linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
 
     <!--Search box-->
     <section id="searchBoxGroup">
@@ -36,37 +57,13 @@
     <!--Result box-->
     <div id="resultBoxGroup" class="column">
       <h4 id = "change">Results for ""</h4>
-      <!--Create a banner-->
-      <!-- <div class="banner">
-        <div class = "banner_content">
-          <div class="banner__text">
-            <p class="banner_info">Search the movie title on the search bar. The results will appear once you press enter </p>
-          </div>
-          <button class="banner__close" type="button">
-            <span class="material-icons">
-              close
-            </span>
-          </button>
-        </div>
-      </div> -->
+
       <div class="result"></div>
       <!--result is here-->
     </div>
     <!--Nomination box-->
      <div id="nominationsBoxGroup" class="column">
       <h4>Nominations</h4>
-      <!-- <div class="banner">
-        <div class = "banner_content">
-          <div class="banner__text">
-            <p class="banner_info">Click the nominate on the result list. You can only have 5 nominations</p>
-          </div>
-          <button class="banner__close" type="button">
-            <span class="material-icons">
-              close
-            </span>
-          </button>
-        </div>
-      </div> -->
       <!--Displaying result-->
       <div class="result"></div>
       <!--Display result below-->
@@ -74,43 +71,20 @@
       <div id="emptyNoti">
         <img class="icon" src="iconInfo.png">
         <p class="notiText">Nominate movies from search results</p>
-        <img class="dismiss" src="dismiss.png">
+        <span id='close'><img class="dismiss" src="dismiss.png"></span>
       </div>
       <div id="successNoti">
         <img class="icon" src="iconSuccess.png">
         <p class="notiText">You have nominated 5 movies!</p>
-        <img class="dismiss" src="dismiss.png">
+        <span id='close'><img class="dismiss" src="dismiss.png"></span>
       </div>
       <div id="cancelNoti">
         <img class="icon" src="exclamation-mark.png">
         <p class="notiText">You have already nominated 5 movies!</p>
-        <img class="dismiss" src="dismiss.png">
+        <!-- <img class="dismiss" src="dismiss.png"> -->
+        <span id='close'><img class="dismiss" src="dismiss.png"></span>
       </div>
 
-      <!--Share buttons-->
-      <!-- <div class="share-btn-container">
-        <span><i class="fas fa-share-alt">Share</i></span> -->
-        <!-- Facebook share icon -->
-          <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https://ishakantak.github.io/TheShoppies/" class="facebook-btn">Share</a>
-          <i class="fab fa-facebook"></i>
-        </a>
-
-        <a href="https://twitter.com/intent/tweet?url=https://ishakantak.github.io/TheShoppies/&text=" class="twitter-btn">
-          <i class="fab fa-twitter"></i>
-        </a>
-
-        <a href="https://pinterest.com/pin/create/button/?url=https://ishakantak.github.io/TheShoppies/&media=&description=" class="pinterest-btn">
-          <i class="fab fa-pinterest"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://ishakantak.github.io/TheShoppies/&title=&summary=&source=" class="linkedin-btn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-
-        <a href="mailto:info@example.com?&subject=&body=https://ishakantak.github.io/TheShoppies/" class="email-btn">
-          <i class="fab fa-email"></i>
-        </a>
-      </div> -->
       <div id="nominations" class="container"></div>
     </div>
    </section>

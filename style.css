@@ -149,10 +149,10 @@ p {
 }
 
 .share-btn-container {
-  width: 280px;
-  height: 60px;
+  width: 140px;
+  height: 40px;
   background: #dfe6e9;
-  border-radius: 40px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,6 +160,7 @@ p {
   position: relative;
   cursor: pointer;
   transition: .3s linear;
+  float: right;
 }
 
 .share-btn-container:hover{
@@ -172,13 +173,11 @@ p {
   height: 100%;
   background: #2d3436;
   color: #f1f1f1;
-  font-size: 14px;
-  font-family: sans-serif;
   text-align: center;
-  line-height: 80px;
-  z-index: 999;
+  line-height: 40px;
+  z-index: 499;
   transition: .6s linear;
-  border-radius: 40px;
+  border-radius: 20px;
 }
 
 .share-btn-container:hover span {
@@ -188,7 +187,7 @@ p {
 
 .share-btn-container a {
   flex: 1;
-  font-size: 14px;
+  font-size: 13px;
   color: #2d3436;
   text-align: center;
   transform: translateX(-100%);
@@ -216,23 +215,6 @@ p {
 .share-btn-container a:nth-of-type(4) {
   transition-delay: 0.4s;
 }
-.share-btn-container a:nth-of-type(5) {
-  transition-delay: 0.2s;
-}
-
-.icon {
-  float: left;
-  width: 28px;
-  height: 28px;
-}
-
-.dismiss {
-  float:right;
-  width: 36px;
-  height: 36px;
-  margin-right: 0px;
-}
-
 
 .icon {
   float: left;

@@ -8,20 +8,13 @@ root.appendChild(container);
 
 //calls when page loads, set up event handlers
 function pageLoad() {
-  // alert("Hello");
-
-  // document.querySelector(".banner__close").addEventListener("click", function() {
-  //   this.closest(".banner").style.display = "none";
-  // });
-
-
-
 
   document.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
       // alert('Enter is pressed!');
       getMovies();
   }
+
 });
 }
 
@@ -30,9 +23,8 @@ function getMovies() {
   let movieName = (document.getElementById("movieType").value);
 
   if (movieName.length === 0) {
-    alert("NO TEXT");
+    alert("Please enter a movie title");
   }
-
 
   xhr.open("GET", "https://www.omdbapi.com/?s=" + movieName + "&apikey=ec497065", true);
 
@@ -73,10 +65,19 @@ function getMovies() {
         emptyNoti.setAttribute("style", "display: flex; align-items: center;");
       }
 
+      if (true) {
+
+      }
+
 
         //nomination button clicked section
         function myFunction() {
-          // alert("OK");
+
+          if(emptyNoti != null ) {
+            emptyNoti.setAttribute("style", "display: none;");
+          }
+
+
 
           nomination_button.disabled = true;
           var copy = searchresult_list.cloneNode(true);
@@ -91,25 +92,22 @@ function getMovies() {
           // nominationremoved_button.setAttribute("style", "border: none");
           nominationremoved_button.onclick = removeNomination;
 
-          if(emptyNoti != null ) {
-            emptyNoti.setAttribute("style", "display: flex;");
-          }
-
 
           //remove nomination function
           function removeNomination() {
-            alert("Nomination removed");
+
             nomination_List.remove();
             nomination_button.disabled = false;
 
             if (document.getElementById("nominations").childElementCount < 5) {
               document.getElementById("successNoti").setAttribute("style", "display: none;")
+              document.getElementById("cancelNoti").setAttribute("style", "display: none;")
             }
           }
+
           nomination_List.appendChild(nominationremoved_button);
             if(document.getElementById("nominations").childElementCount >= 5){
               console.log(nomination_List.lastChild);
-              // nomination_List.remove();
               document.getElementById("successNoti").setAttribute("style", "display: flex; align-items: center;")
             }
             if(document.getElementById("nominations").childElementCount > 5){
