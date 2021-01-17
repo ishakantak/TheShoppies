@@ -220,11 +220,53 @@ p {
   transition-delay: 0.2s;
 }
 
-/* #emptyNoti {
+.icon {
+  float: left;
+  width: 28px;
+  height: 28px;
+}
+
+.dismiss {
+  float:right;
+  width: 36px;
+  height: 36px;
+  margin-right: 0px;
+}
+
+
+.icon {
+  float: left;
+  width: 28px;
+  height: 28px;
+}
+
+.dismiss {
+  float:right;
+  width: 36px;
+  height: 36px;
+  margin-right: 0px;
+}
+
+#emptyNoti {
   display: none;
   overflow: hidden;
-  /* background-color: #EFFAFA; */
-  /* margin: 20px;
+  background-color: #EFFAFA;
+  margin: 20px;
   padding: 8px 12px;
   border-radius: 6px;
-}  */
+}
+
+#successNoti {
+  display: none;
+  overflow: hidden;
+  background-color: #E3F1DF;
+  margin: 20px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.notiText {
+  display: inline-block;
+  float: left;
+  margin: 6px auto auto 12px;
+}

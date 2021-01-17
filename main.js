@@ -8,7 +8,7 @@ root.appendChild(container);
 
 //calls when page loads, set up event handlers
 function pageLoad() {
-  alert("Hello");
+  // alert("Hello");
 
   // document.querySelector(".banner__close").addEventListener("click", function() {
   //   this.closest(".banner").style.display = "none";
@@ -19,7 +19,7 @@ function pageLoad() {
 
   document.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
-      alert('Enter is pressed!');
+      // alert('Enter is pressed!');
       getMovies();
   }
 });
@@ -39,7 +39,7 @@ function getMovies() {
   xhr.onload = function () {
     if (this.status == 200){
 
-      alert("HI");
+      // alert("HI");
       var omdbFilter = JSON.parse(this.response);
 
       var movieFilter = omdbFilter.Search;
@@ -68,16 +68,15 @@ function getMovies() {
         nomination_button.innerHTML = "Nominate";
         nomination_button.onclick = myFunction;
 
-      // if(document.getElementById("nominations").childElementCount == 0) {
-      //   var emptyNoti = document.getElementByClassName("emptyNoti")
-      //   emptyNoti.setAttribute("style", "display: flex; align-items: center;");
-      // //
-      // }
+      if(document.getElementById("nominations").childElementCount == 0) {
+        var emptyNoti = document.getElementByClassName("emptyNoti")
+        emptyNoti.setAttribute("style", "display: flex; align-items: center;");
+      }
 
 
         //nomination button clicked section
         function myFunction() {
-          alert("OK");
+          // alert("OK");
 
           nomination_button.disabled = true;
           var copy = searchresult_list.cloneNode(true);
@@ -102,19 +101,18 @@ function getMovies() {
             alert("Nomination removed");
             nomination_List.remove();
             nomination_button.disabled = false;
-            nomination_button.innerHTML = "Nominate";
+
+            if (document.getElementById("nominations").childElementCount < 5) {
+              document.getElementById("successNoti").setAttribute("style", "display: none;")
+            }
           }
           nomination_List.appendChild(nominationremoved_button);
-          if(document.getElementById("nominations").childElementCount > 5){
-            alert("Nomination is greater than 5");
-            console.log(nomination_List.lastChild);
-            nomination_List.remove();
-            nomination_button.disabled = true;
-            nomination_button.innerHTML = "Nominate";
-          }
-          if(document.getElementById("nominations").childElementCount == 5){
-            alert("You have 5 nominations");
-          }
+            if(document.getElementById("nominations").childElementCount > 5){
+              alert("Nomination is greater than 5");
+              console.log(nomination_List.lastChild);
+              nomination_List.remove();
+              document.getElementById("successNoti").setAttribute("style", "display: flex; align-items: center;")
+            }
 
       //end of myFunction()
       }
