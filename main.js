@@ -34,7 +34,7 @@ function getMovies() {
   }
 
 
-  xhr.open("GET", "http://www.omdbapi.com/?s=" + movieName + "&apikey=ec497065", true);
+  xhr.open("GET", "https://www.omdbapi.com/?s=" + movieName + "&apikey=ec497065", true);
 
   xhr.onload = function () {
     if (this.status == 200){
