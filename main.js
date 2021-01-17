@@ -78,6 +78,7 @@ function getMovies() {
         //nomination button clicked section
         function myFunction() {
           alert("OK");
+
           nomination_button.disabled = true;
           var copy = searchresult_list.cloneNode(true);
           // Append the cloned searchresult_list to nomination_List with id="nominations"
@@ -108,6 +109,8 @@ function getMovies() {
             alert("Nomination is greater than 5");
             console.log(nomination_List.lastChild);
             nomination_List.remove();
+            nomination_button.disabled = true;
+            nomination_button.innerHTML = "Nominate";
           }
           if(document.getElementById("nominations").childElementCount == 5){
             alert("You have 5 nominations");
